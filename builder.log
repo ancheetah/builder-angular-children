@@ -1,0 +1,81 @@
+> builder-angular-example@ start /Users/ancheetah/BuilderIO/builder/examples/angular
+> ng serve
+
+****************************************************************************************
+This is a simple server for use in testing or debugging Angular applications locally.
+It hasn't been reviewed for security issues.
+
+DON'T USE IT FOR PRODUCTION!
+****************************************************************************************
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size | Estimated Transfer Size
+main.js               | main          | 328.81 kB |                79.59 kB
+polyfills.js          | polyfills     | 181.34 kB |                46.78 kB
+styles.css, styles.js | styles        | 117.12 kB |                28.51 kB
+runtime.js            | runtime       |   1.26 kB |               683 bytes
+
+                      | Initial Total | 628.53 kB |               155.54 kB
+
+Build at: 2022-06-24T20:26:37.412Z - Hash: c2e0d8c2c384d4d0 - Time: 10685ms
+
+./node_modules/@builder.io/angular/fesm2015/builder.io-angular.mjs - Error: Module build failed (from ./node_modules/@angular-devkit/build-angular/src/babel/webpack-loader.js):
+TypeError: Cannot create property 'message' on string '/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/@builder.io/angular/fesm2015/builder.io-angular.mjs: This application depends upon a library published using Angular version 14.0.2, which requires Angular version 14.0.0 or newer to work correctly.
+Consider upgrading your application to use a more recent version of Angular.
+  208 | }
+  209 | BuilderContentComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.2", ngImport: i0, type: BuilderContentComponent, deps: [{ token: i0.ElementRef }, { token: BuilderComponentService }], target: i0.ɵɵFactoryTarget.Component });
+> 210 | BuilderContentComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.2", type: BuilderContentComponent, selector: "builder-content", inputs: { useHtml: "useHtml", data: "data", hydrate: "hydrate", prerender: "prerender", content: "content", options: "options" }, outputs: { contentLoad: "contentLoad", contentError: "contentError"9m }, ngImport: i0, template: "<ng-content> </ng-content>\n", styles: [":host{display:block}\n"], changeDetection: i0.ChangeDetectionStrategy.OnPush });
+      |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  211 | i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.2", ngImportm: i0, type: BuilderContentComponent, decorators: [{
+  212 |             type: Component,
+  213 |             args: [{ selector: 'builder-content', changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content> </ng-content>\n", styles: [":host{display:block}\n"] }]'
+    at run (/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/@babel/core/lib/transformation/index.js:37:15)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:261:32)
+    at /Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:223:11)
+    at /Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:189:28
+    at /Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/@babel/core/lib/gensync-utils/async.js:74:7
+    at /Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:113:33
+    at step (/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:287:14)
+    at /Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/ancheetah/BuilderIO/builder/examples/angular/node_modules/gensync/index.js:223:11)
+
+Error: node_modules/@builder.io/angular/app/modules/builder/components/builder-blocks-outlet/builder-blocks-outlet.component.d.ts:28:18 - [91merror TS2314: Generic type 'ɵɵComponentDeclaration' requires 7 type argument(s).
+
+28     static ɵcmp: i0.ɵɵComponentDeclaration<BuilderBlocksOutletComponent, "builder-blocks-outlet", never, { "builderBlock": "builderBlock"; "builderState": "builderState"; "blocks": "blocks"; "renderOnChange": "renderOnChange"; "dataPath": "dataPath"; }, {}, never, never, false>;
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@builder.io/angular/app/modules/builder/components/builder-blocks/builder-blocks.component.d.ts:24:18 - error TS2314: Generic type 'ɵɵComponentDeclaration' requires 7 type argument(s).
+
+24     static ɵcmp: i0.ɵɵComponentDeclaration<BuilderBlocksComponent, "builder-blocks", never, { "blocks": "blocks"; "child": "child"; "prerender": "prerender"; "model": "model"; "key": "key"; "options": "options"; "field": "field"; }, {}, never, never, false>;
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@builder.io/angular/app/modules/builder/components/builder-component/builder-component.component.d.ts:63:18 - error TS2314: Generic type 'ɵɵComponentDeclaration' requires 7 type argument(s).
+
+63     static ɵcmp: i0.ɵɵComponentDeclaration<BuilderComponentComponent, "builder-component", never, { "model": "model"; "name": "name"; "handleRouting": "handleRouting"; "reloadOnRoute": "reloadOnRoute"; "content": "content"; "options": "options"; "data": "data"; "context": "context"; "hydrate": "hydrate"; "prerender": "prerender"; "navigationTimeout": "navigationTimeout"; }, { "load": "load"; "route": "route"; "error": "error"; }, never, ["*"], false>;
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@builder.io/angular/app/modules/builder/components/builder-content/builder-content.component.d.ts:25:18 - error TS2314: Generic type 'ɵɵComponentDeclaration' requires 7 type argument(s).
+
+25     static ɵcmp: i0.ɵɵComponentDeclaration<BuilderContentComponent, "builder-content", never, { "useHtml": "useHtml"; "data": "data"; "hydrate": "hydrate"; "prerender": "prerender"; "content": "content"; "options": "options"; }, { "contentLoad": "contentLoad"; "contentError": "contentError"; }, never, ["*"], false>;
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@builder.io/angular/app/modules/builder/directives/builder-content.directive.d.ts:41:18 - error TS2314: Generic type 'ɵɵDirectiveDeclaration' requires 6 type argument(s).
+
+41     static ɵdir: i0.ɵɵDirectiveDeclaration<BuilderContentDirective, "[builderModel]", never, { "reloadOnRoute": "reloadOnRoute"; "builderModel": "builderModel"; }, {}, never, never, false>;
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✖ Failed to compile.
